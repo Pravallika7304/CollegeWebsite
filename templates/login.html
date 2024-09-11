@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  static 'css\style.css'%}">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css'%}">
+    <script src="{% static 'js\bootstrap.bundle.min.js'%}"></script>
+</head>
+<body>
+    {% block title%}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{%static 'images/register.jfif' %}" class="img img-thumbnail w-100" alt="">
+            </div>
+           <div class="col-sm-6">
+            <div>
+                <h1>Login Page</h1>
+                <span>{{msg}}</span>
+                <form action="/logincheck" method="">
+                    <img style="margin-left:0%;margin-right: 55000%;" src="{% static 'stu.jpeg' %}" alt="">
+                    <div class="mb-3">
+                        <input name="Email" id="E-mail" class="form-control border-dark border-3" type="text" placeholder="E-mail:" required/>
+                    </div>
+                    <div class="mb-3">
+                        <input name="Password" id="password" class="form-control border-dark border-3" type="password" placeholder="Password:" required/>
+                    </div>
+                    <div>                       
+                        <div class="mb-3">
+                            <button class="btn btn-danger text-white" type="submit">login</button>
+                            <button class="btn btn-primary text-white" type="reset">reset</button>
+
+                        </div>
+                    </div>
+                </form>
+        </div>
+           </div>
+        </div>
+
+    </div>
+    {% endblock%}
+</body>
+</html>

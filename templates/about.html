@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css1\style.css'%}">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css'%}" >
+    <script src="{% static 'js\bootstrap.bundle.min.js'%}"></script>
+</head>
+<body>
+    {% block title %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{%static 'pravallika.jpg' %}" class="img img-thumbnail w-100" alt="">
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <div>
+                    <h1>About us</h1>
+                    <p>Our campus offer outstanding learning environment in attractive surroundings. Provide a leafy, safe and inviting setting in which you can study, socialise and relax. We are continually investing in our campus to ensure that we can provide state-of-the-art facilities and an excellent experience for our students</p>
+                    <h3>Our Faculty</h3>
+                    <p>Our outstanding faculty are well known for faculty-student mentoring. Our students benefit from studying in a setting rich with research opportunities, where faculty devote much of their time and energy to teaching and advising the students.  Our Faculty are here to teach the students, interact with them, challenge them, and help refine their critical thinking skills as our students prepare for lifelong career growth and leadership in a global society.</p>
+                    <h3>Edge in Employment Opportunities</h3>
+                    <p>GIST offers a comprehensive career development program for students that spans everything from communication skills, to interpersonal skills, to résumé writing, to internship and placements, to sophisticated job search capabilities.</p>
+                    <h3>ADMISSIONS</h3>
+                     <p>Applications are invited from eligible candidates for admission under Category – B seats for admission into the B.Tech 1st year courses.</p>
+                     <h3>ANTIRAGGING</h3>
+                    <p> Anti ragging committee in Geethanjali Institute of Science and Technology is constituted in the year 2009 with a few members who get changed every year. Every year before the commencement of first year class work the committee members discuss the preventive measures. The committee is headed by Prof.Dr.G.Subba Rao.</p>
+                    <h3>CAMPUS PLACEMENT VICTORY</h3>
+                    <p> GIST Carving Careers strongly believes that only skilled individuals have the foot presence in the current global market and such resources are the assets to any organization. Hence GIST Carving Careers motivates the students with various skill development programs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css1\style.css'%}">
+    <link rel="stylesheet" href="{%static 'css\bootstrap.min.css'%}">
+    <script src="{%static 'js\bootstrap.bundle.min.js'%}"></script>
+</head>
+<body class="bg-info">
+    {% block title %}
+    <h1 class="alert alert-primary text-center">APPLICATION FORM</h1>
+    <div class="conatainer">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{% static 'logo.jpg'%}" type="jpg" style="width:50vw" alt="">
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Register page</h1>
+                    <span>{{msg}}</span>
+                    <form action="/doregister">
+                        <div class="mb-3">
+                            <input name="FullName" id="nameid"class="form-control border border-3 border-dark" type="fullname" placeholder="FullName" required/>
+                        </div>
+                        <div class="mb-3">
+                            <input id="bday" class="form-control border border-3 border-dark" required="required" max="2006-05-13" type="date" >
+                        </div>
+                        <div class="mb-3">
+                            <input name="Email" id="emailid"class="form-control border border-3 border-dark" type="email" placeholder="Email" required/>
+                        </div>
+                        <div class="mb-3">
+                            <input name="Password" id="passwordid"class="form-control border border-3 border-dark" type="password" placeholder="Password" required/>
+                        </div>
+                        <div class="mb-3">
+                            <input name="GraduationYear" id="gyearid"class="form-control border border-3 border-dark" type="year" placeholder="GraduationYear" required/>
+                        </div>
+                        <div class="mb-3">
+                            <input name="PhoneNo" id="phnoid" class="form-control border border-3 border-dark" type="tel" maxlength="10" pattern="\d{10}" placeholder="PhoneNo"  required/>
+                        </div>
+                        <label for="fileUpload">Upload Eamcet Rank Card:</label>
+                        <input type="file" id="fileUpload" name="fileUpload" accept=".doc,.docx,.pdf,.txt">
+                        <br>
+                        <div class="container">
+                            <button type="button" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                        <br>
+                        <div class="mb-2">
+                            <button class="btn btn-primary text-white" type="Register">Register</button>
+                            <button class="btn btn-secondary text-white"type="reset">Reset</button>
+                        </div>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        <br></br>
+                        
+                    
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'adminlayout.html'%}
+{% load static%}
+{% block title%}
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <h1>Admin page</h1>
+              <table class="table">
+                <thead>
+                    <th>fullname</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>phnno</th>
+                    <th>graduationyear</th>
+                    <th>desig</th>
+                </thead>
+                {% for user in users%}
+                <tr>
+                    <form action="/modify">
+                    <td>
+                        <input class="form-control" name="FullName" type="text" value="{{user.FullName}}">
+                    </td>
+                    <td>
+                        <input class="form-control" name="Email" type="text" value="{{user.Email}}">
+                    </td>
+                    <td>
+                        <input class="form-control" name="Password" type="text" value="{{user.Password}}">
+                    </td>
+                    <td>
+                        <input class="form-control" name="PhoneNo" type="text" value="{{user.PhoneNo}}">
+                    </td>
+                    <td>
+                        <input class="form-control" name="GraduationYear" type="text" value="{{user.GraduationYear}}">
+                    </td>
+                    <td>
+                        <input class="form-control" name="desig" type="text" value="{{user.desig}}">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" name="operation" value="update" type="submit">update</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" name="operation" value="delete" type="submit">delete</button>
+                    </td>
+                </form>
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock%}

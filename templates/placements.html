@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'index.html'%}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  static 'css\style.css'%}">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css'%}">
+    <script src="{% static 'js\bootstrap.bundle.min.js'%}"></script>
+</head>
+<body>
+    {% block title%}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+               <h1>NBA & NAAC</h1>
+               <p>
+    Our college is  been accredited with NACC  A grade  and it is also been accredited with NBA appreciating the great  infrastructure and academics  by adding feathers to the cap.</p>
+    <div>
+        <img src="{%static 'naac.jpeg' %}" class="img img-thumbnail" alt="">
+    </div>
+    <div>
+        <img src="{%static 'naacuse.png' %}" class="img img-thumbnail" alt="">
+    </div>
+    <h1>Placements Record</h1>
+    <p> Our college has a great record of placing students in many reputed companies. Year by year the placements count is rapidly increasing .
+               All the students who ever got placed are extremely satisfied in their respective jobs and also the highest package of 11lpa.
+              In the last academic year almost 260+ students were placed in the companies</p>
+              <div>
+                  <img src="{%static 'achieve.png' %}" class="img img-thumbnail w-100" alt="">'
+              </div>
+            </div>
+          
+        </div>
+
+    </div>
+    {% endblock%}
+</body>
+</html>
